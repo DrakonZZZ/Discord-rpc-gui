@@ -6,11 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord RPC GUI</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/renderer.js" defer></script>
 </head>
 
 <body>
+    <div class="app">
+        <div class="titlebar">
+            <div class="titleheader">
+                <div class="title">
+                    Discord RPC Gui
+                </div>
+                <div class="overlaye-buttons">
+                    <button id="min" class="btn min-btn"></button>
+                    <button id="mix" class="btn max-btn"></button>
+                    <button id="close" class="btn close-btn"></button>
+                </div>
+            </div>
+        </div>
+        <div id="app-container">
+            <form action="">
+                <input type="text" id="details">
+                <input type="text" id="state">
+                <input type="text" id="largeImageText">
+                <input type="text" id="largeImageKey">
+                <input type="text" id="smallImageText">
+                <input type="text" id="smallImageKey">
+                <input type="text" id="buttonText">
+                <input type="text" id="buttonUrl">
+                <div class="btn-bottom">
+                    <button type="submit">CONNECT</button>
+                    <button id="disconnect">DISCONNECT</button>
+                </div>
+            </form>
 
-    <script src="./scripts/renderer.js"></script>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
