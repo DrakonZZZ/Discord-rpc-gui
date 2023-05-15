@@ -10,7 +10,6 @@ const createWindow = () => {
       nodeIntegration: true,
     },
     resizable: false,
-    titleBarStyle: 'hidden',
     titleBarOverlay: {
       color: '#252729',
       symbolColor: '#FF5733',
