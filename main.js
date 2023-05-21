@@ -1,34 +1,30 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
-const path = require('node:path');
+const { app, BrowserWindow } = require('electron');
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 500,
+    width: 800,
     height: 600,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true,
-    },
-    resizable: false,
-    titleBarOverlay: {
-      color: '#252729',
-      symbolColor: '#FF5733',
-      height: 32,
-    },
+    // resizable: false,
   });
-  win.setMenuBarVisibility(false);
-  win.loadFile(path.join(__dirname, 'src', 'index.html'));
-  win.setBackgroundColor('#252729');
+  // win.setMenuBarVisibility(false);
+  win.loadFile('index.html');
 };
 
-app.whenReady().then(() => {
-  createWindow();
+app
+  .whenReady()
+  .then(() => {
+    createWindow();
 
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow();
-  });
-});
+    app.on('activate', () => {
+      if (BrowserWindow.getAllWindows().length === 0) createWindow;
+    });
+    console.log('logged in');
+  })
+  .catch((error) => console.error());
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
+  console.log('logged out');
 });

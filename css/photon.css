@@ -604,6 +604,7 @@ label {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #c9c8c8;
 }
 
 input[type="search"] {
@@ -619,6 +620,7 @@ input[type="checkbox"] {
 .form-container {
   width: 80%;
   margin: auto;
+  padding-top: 2rem;
 }
 
 .form-control {
@@ -645,6 +647,12 @@ textarea {
 
 .form-group {
   margin-bottom: 10px;
+}
+
+.form-group-side {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .radio,
@@ -692,7 +700,6 @@ textarea {
   position: relative;
   overflow-y: auto;
   flex: 1;
-  border-left: 1px solid #ddd;
   background-color: #333333;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }

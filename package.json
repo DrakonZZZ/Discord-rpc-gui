@@ -1,19 +1,14 @@
 {
-  "name": "discord-rpc-gui",
+  "name": "terminal-win",
   "version": "1.0.0",
-  "description": "",
+  "description": "terminal style window editor",
   "main": "main.js",
-  "type": "module",
   "scripts": {
-    "dev": "electron ."
+    "start": "electron ."
   },
-  "author": "",
+  "author": "Drakonz",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^24.1.3"
-  },
-  "dependencies": {
-    "discord-rpc": "^4.0.1",
-    "node-cmd": "^5.0.0"
+    "electron": "^24.3.0"
   }
 }
